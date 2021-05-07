@@ -2,6 +2,7 @@ using System;
 
 namespace CDX {
   public class Globals {
-    public static DefaultLogPath;
+    public static string DefaultLogPath;
+    public static int TimePassed;
   }
 }
