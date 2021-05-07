@@ -1,10 +1,13 @@
 using System;
 
 namespace CDX.Logging {
-  public class Log {
+  public class Log : Globals{
     public string Path;
-    public Log(bool useDeafault, string path = ""){
+    public Log(bool useDefault, string path = ""){
       Path = path;
+      if(UseDefault == true){
+        Path = UseDefaultPath
+      }
     }
   }
 }
