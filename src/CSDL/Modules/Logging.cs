@@ -1,6 +1,6 @@
 using System;
 
-namespace Logging{
+namespace CSDL.Logging{
   public class Log{
     private int LogState;
     private int Path;
