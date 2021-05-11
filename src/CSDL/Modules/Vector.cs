@@ -128,15 +128,16 @@ namespace LinearAlgebra{
       var distance = 0f;
       var VA = new Vector4();
       if(VType == 2){
-        distance = Math.Sqrt(X * X1 + Y * Y2);
-        VA = new Vector4(X/distance, Y/distance, 0, 0);
+        distance = Math.Sqrt(X1 * X2 + Y1 * Y2);
+        VA = new Vector4(X1/distance, Y1/distance, 0, 0);
       }
       if(VType == 3){
-        distance = Math.Sqrt(X * X1 + X * X2 + );
-        VA = new Vector4(X/distance, Y/distance, 0, 0);
+        distance = Math.Sqrt(X1 * X2 + Y1 * Y2 + Z1 * Z2);
+        VA = new Vector4(X1/distance, Y1/distance, Z/distance, 0);
       }
       if(VType == 4){
-        
+        distance = Math.Sqrt(X1 * X2 + Y1 * Y2 + Z1 * Z2 + W1 * W2);
+        VA = new Vector4(X1/distance, Y1/distance, Z/distance, W / distance);
       }
       return VA;
     }
