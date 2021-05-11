@@ -23,7 +23,7 @@ namespace Logging{
           }  
         }
         if(MessageStatus = 2){
-           using (StreamWriter writer = new StreamWriter(Path, true))  
+          using (StreamWriter writer = new StreamWriter(Path, true))  
           {  
             writer.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 2 - Error::" + Msg + "::EndLog");
           }
