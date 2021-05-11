@@ -11,19 +11,19 @@ namespace Logging{
     public void LogMsg(string Msg, int Line, string FileName, int MessageStatus = 0){
       if(LogState == 1){
         if(MessageStatus = 0){
-          using (StreamWriter writer = new StreamWriter(Directory, true))  
+          using (StreamWriter writer = new StreamWriter(Path, true))  
           {  
             writer.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 0 - Message::" + Msg + "::EndLog");
           }  
         }
         if(MessageStatus = 1){
-           using (StreamWriter writer = new StreamWriter(Directory, true))  
+           using (StreamWriter writer = new StreamWriter(Path, true))  
           {  
             writer.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 1 - Warning::" + Msg + "::EndLog");
           }  
         }
         if(MessageStatus = 2){
-           using (StreamWriter writer = new StreamWriter(Directory, true))  
+           using (StreamWriter writer = new StreamWriter(Path, true))  
           {  
             writer.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 2 - Error::" + Msg + "::EndLog");
           }
