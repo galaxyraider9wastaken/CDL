@@ -67,5 +67,62 @@ namespace LinearAlgebra{
       }
       return VA;
     }
+    public Vector4 Subtract(int VType, float X, float Y, float Z = 0, float W = 0, float X1, float Y2, float Z3 = 0, float W4 = 0){
+      var VA = new Vector4();
+      if(VType == 2){
+        VA.X = X1 - X2;
+        VA.Y = Y1 - Y2;
+      }
+      if(VType == 3){
+        VA.X = X1 - X2;
+        VA.Y = Y1 - Y2;
+        VA.Z = Z1 - Z2;
+      }
+      if(VType == 4){
+        VA.X = X1 - X2;
+        VA.Y = Y1 - Y2;
+        VA.Z = Z1 - Z2;
+        VA.W = W1 - W2;
+      }
+      return VA;
+    }
+    public Vector4 Multiply(int VType, float X, float Y, float Z = 0, float W = 0, float X1, float Y2, float Z3 = 0, float W4 = 0){
+      var VA = new Vector4();
+      if(VType == 2){
+        VA.X = X1 * X2;
+        VA.Y = Y1 * Y2;
+      }
+      if(VType == 3){
+        VA.X = X1 * X2;
+        VA.Y = Y1 * Y2;
+        VA.Z = Z1 * Z2;
+      }
+      if(VType == 4){
+        VA.X = X1 * X2;
+        VA.Y = Y1 * Y2;
+        VA.Z = Z1 * Z2;
+        VA.W = W1 * W2;
+      }
+      return VA;
+    }
+    public Vector4 Multiply(int VType, float X, float Y, float Z = 0, float W = 0, float X1, float Y2, float Z3 = 0, float W4 = 0){
+      var VA = new Vector4();
+      if(VType == 2){
+        VA.X = X1 / X2;
+        VA.Y = Y1 / Y2;
+      }
+      if(VType == 3){
+        VA.X = X1 / X2;
+        VA.Y = Y1 / Y2;
+        VA.Z = Z1 / Z2;
+      }
+      if(VType == 4){
+        VA.X = X1 / X2;
+        VA.Y = Y1 / Y2;
+        VA.Z = Z1 / Z2;
+        VA.W = W1 / W2;
+      }
+      return VA;
+    }
   }
 }
