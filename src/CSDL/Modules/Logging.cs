@@ -11,13 +11,22 @@ namespace Logging{
     public void LogMsg(string Msg, int Line, string FileName, int MessageStatus = 0){
       if(LogState == 1){
         if(MessageStatus = 0){
-          Console.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 0 - Message::" + Msg + "::EndLog");
+          using (StreamWriter writer = new StreamWriter(Directory, true))  
+          {  
+            writer.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 0 - Message::" + Msg + "::EndLog");
+          }  
         }
         if(MessageStatus = 1){
-          Console.WriteLine("Log:: File - " + File + "Line - " + Line " >" + "Status 1 - Warning::" + Msg + "::EndLog");
+           using (StreamWriter writer = new StreamWriter(Directory, true))  
+          {  
+            writer.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 1 - Warning::" + Msg + "::EndLog");
+          }  
         }
         if(MessageStatus = 2){
-          Console.WriteLine("Log:: File - " + File + "Line - " + Line " >" + "Status 2 - Error::" + Msg + "::EndLog");
+           using (StreamWriter writer = new StreamWriter(Directory, true))  
+          {  
+            writer.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 2 - Error::" + Msg + "::EndLog");
+          }
         }
       }
       if(LogState == 2){
