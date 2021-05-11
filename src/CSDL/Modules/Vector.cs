@@ -48,8 +48,8 @@ namespace LinearAlgebra{
 }
 namespace LinearAlgebra{
   public class Vector {
-    public Vector4 Add(int VType, float X, float Y, float Z = 0, float W = 0, float X1, float Y2, float Z3 = 0, float W4 = 0){
-      var VA = new Vector4();
+    public Vector4 Add(int VType, float X1, float Y1, float Z1 = 0, float W1 = 0, float X2, float Y2, float Z2 = 0, float W2 = 0)){
+      var VA = new Vector4(0, 0, 0, 0);
       if(VType == 2){
         VA.X = X1 + X2;
         VA.Y = Y1 + Y2;
@@ -67,8 +67,8 @@ namespace LinearAlgebra{
       }
       return VA;
     }
-    public Vector4 Subtract(int VType, float X, float Y, float Z = 0, float W = 0, float X1, float Y2, float Z3 = 0, float W4 = 0){
-      var VA = new Vector4();
+    public Vector4 Subtract(int VType, float X1, float Y1, float Z1 = 0, float W1 = 0, float X2, float Y2, float Z2 = 0, float W2 = 0)){
+      var VA = new Vector4(0, 0, 0, 0);
       if(VType == 2){
         VA.X = X1 - X2;
         VA.Y = Y1 - Y2;
@@ -86,8 +86,8 @@ namespace LinearAlgebra{
       }
       return VA;
     }
-    public Vector4 Multiply(int VType, float X, float Y, float Z = 0, float W = 0, float X1, float Y2, float Z3 = 0, float W4 = 0){
-      var VA = new Vector4();
+    public Vector4 Multiply(int VType, float X1, float Y1, float Z1 = 0, float W1 = 0, float X2, float Y2, float Z2 = 0, float W2 = 0)){
+      var VA = new Vector4(0, 0, 0, 0);
       if(VType == 2){
         VA.X = X1 * X2;
         VA.Y = Y1 * Y2;
@@ -105,8 +105,8 @@ namespace LinearAlgebra{
       }
       return VA;
     }
-    public Vector4 Multiply(int VType, float X, float Y, float Z = 0, float W = 0, float X1, float Y2, float Z3 = 0, float W4 = 0){
-      var VA = new Vector4();
+    public Vector4 Divide(int VType, float X1, float Y1, float Z1 = 0, float W1 = 0, float X2, float Y2, float Z2 = 0, float W2 = 0)){
+      var VA = new Vector4(0, 0, 0, 0);
       if(VType == 2){
         VA.X = X1 / X2;
         VA.Y = Y1 / Y2;
@@ -121,6 +121,22 @@ namespace LinearAlgebra{
         VA.Y = Y1 / Y2;
         VA.Z = Z1 / Z2;
         VA.W = W1 / W2;
+      }
+      return VA;
+    }
+    public Vector4 Normalize(int VType, float X1, float Y1, float Z1 = 0, float W1 = 0, float X2, float Y2, float Z2 = 0, float W2 = 0){
+      var distance = 0f;
+      var VA = new Vector4();
+      if(VType == 2){
+        distance = Math.Sqrt(X * X1 + Y * Y2);
+        VA = new Vector4(X/distance, Y/distance, 0, 0);
+      }
+      if(VType == 3){
+        distance = Math.Sqrt(X * X1 + X * X2 + );
+        VA = new Vector4(X/distance, Y/distance, 0, 0);
+      }
+      if(VType == 4){
+        
       }
       return VA;
     }
