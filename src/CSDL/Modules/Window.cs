@@ -2,8 +2,18 @@ using System;
 
 namespace CSDL.Graphics{
   public class Window{
-    public Window(int width, int height, int x, int y, int UpdateState, ){
-      
+    private int Width;
+    private int Height;
+    private int X;
+    private int Y;
+    private int UpdateState;
+    private int Color;
+    public Window(int width, int height, int x, int y, Color color){
+      Width = width;
+      Height = height;
+      X = x;
+      Y = y;
+      Color = color;
     }
   }
 }
