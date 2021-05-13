@@ -1,7 +1,7 @@
 using System;
 
 namespace CSDL.Graphics{
-  public class Window{
+  public class Window : Globals{
     private int Width;
     private int Height;
     private int X;
@@ -15,9 +15,9 @@ namespace CSDL.Graphics{
       Y = y;
       Color = color;
       Title = title;
-      using (StreamWriter writer = new StreamWriter(, true))  
+      using (StreamWriter writer = new StreamWriter(DrawingBatchDataPath + "Windows.txt", true))  
       {  
-        writer.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 0 - Message::" + Msg + "::EndLog");
+        writer.WriteLine("Draw);
       }  
     }
     public void UpdateWindow(){
@@ -25,23 +25,6 @@ namespace CSDL.Graphics{
     }
     public void DrawWindow(){
       
-    }
-  }
-}
-namespace CSDL.Graphics{
-  public class WindowBatch{
-    private Window[] Windows;
-    private int WindowAmount;
-    public WindowBatch(){
-      Windows = new Window[10];
-    }
-    public void AddWindow(Window Window){
-      if(WindowAmount >= 10){
-        Console.WriteLine("There Are to Many Windows You Can Not Make More");
-      } else {
-        Windows[WindowAmount] = Window;
-        WindowAmount +=1;
-      }
     }
   }
 }
