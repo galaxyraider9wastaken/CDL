@@ -8,7 +8,7 @@ namespace CSDL.Graphics{
     private int Y;
     private int Color;
     private string Title;
-    public Window(int width, int height, int x, int y, Color color, string title){
+    public Window(int width, int height, int x, int y, Color color, string title){s
       Width = width;
       Height = height;
       X = x;
