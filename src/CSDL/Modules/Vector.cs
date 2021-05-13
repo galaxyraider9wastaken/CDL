@@ -10,7 +10,7 @@ namespace CSDL.LinearAlgebra{
     }
   }
 }
-namespace LinearAlgebra{
+namespace CSDL.LinearAlgebra{
   public class Vector3{
     public float X;
     public float Y;
@@ -20,7 +20,7 @@ namespace LinearAlgebra{
     }
   }
 }
-namespace LinearAlgebra{
+namespace CSDL.LinearAlgebra{
   public class Vector3{
     public float X;
     public float Y;
@@ -32,7 +32,7 @@ namespace LinearAlgebra{
     }
   }
 }
-namespace LinearAlgebra{
+namespace CSDL.LinearAlgebra{
   public class Vector3{
     public float X;
     public float Y;
@@ -46,7 +46,7 @@ namespace LinearAlgebra{
     }
   }
 }
-namespace LinearAlgebra{
+namespace CSDL.LinearAlgebra{
   public class Vector {
     public Vector4 Add(int VType, float X1, float Y1, float Z1 = 0, float W1 = 0, float X2, float Y2, float Z2 = 0, float W2 = 0)){
       var VA = new Vector4(0, 0, 0, 0);
