@@ -17,11 +17,8 @@ namespace CSDL.Graphics{
       Title = title;
       using (StreamWriter writer = new StreamWriter(DrawingBatchDataPath + "Window.txt", true))  
       {  
-        writer.WriteLine(Width+","+Height+","+X+","+Y+","+Color+","+Title);
+        writer.WriteLine(Width+","+Height+","+X+","+Y+","+Color+","+Title+","+DrawingWindowID);
       }  
-    }
-    public void Update(){
-      
     }
   }
 }
