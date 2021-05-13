@@ -2,7 +2,7 @@ using System;
 
 namespace CSDL.Graphics{
   public class Window{
-    public Window(){
+    public Window(int width, int height, int x, int y, int UpdateState, ){
       
     }
   }
