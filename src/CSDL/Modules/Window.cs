@@ -15,6 +15,10 @@ namespace CSDL.Graphics{
       Y = y;
       Color = color;
       Title = title;
+      using (StreamWriter writer = new StreamWriter(, true))  
+      {  
+        writer.WriteLine("Log:: File - " + File + "Line - " + Line " >"  + "Status 0 - Message::" + Msg + "::EndLog");
+      }  
     }
     public void UpdateWindow(){
       
