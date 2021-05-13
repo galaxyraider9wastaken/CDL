@@ -5,7 +5,7 @@ namespace CSDL.Graphics{
     public static void Draw2D(Vector2 Position, Vector2 Size, Vector2 Rotation, Texture2D, int RFilter){
       using (StreamWriter writer = new StreamWriter(DrawingBatchDataPath + "Sprite2D.txt", true))  
       {  
-        writer.WriteLine(Position.X+","+Position.Y+","+Size.X+","+Size.Y+","+Rotation.X+","+Rotation.Y+","+Texture2D.Path+","+RFilter);
+        writer.WriteLine(Position.X+","+Position.Y+","+Size.X+","+Size.Y+","+Rotation.X+","+Rotation.Y+","+Texture2D.Path+","+RFilter+","+DrawingWindowID);
       }  
     }
     public static void ClearBatch2D(){
@@ -14,7 +14,7 @@ namespace CSDL.Graphics{
     public static void Draw2D(Vector3 Position, Vector3 Size, Vector3 Rotation, Texture3D, int RFilter){
       using (StreamWriter writer = new StreamWriter(DrawingBatchDataPath + "Sprite3D.txt", true))  
       {  
-        writer.WriteLine(Position.X+","+Position.Y+","+Position.Z+","+Size.X+","+Size.Y+","+Size.Z+","+Rotation.X+","+Rotation.Y+","+Rotation.Z+","+Texture3D.Path+","+RFilter);
+        writer.WriteLine(Position.X+","+Position.Y+","+Position.Z+","+Size.X+","+Size.Y+","+Size.Z+","+Rotation.X+","+Rotation.Y+","+Rotation.Z+","+Texture3D.Path+","+RFilter+","+DrawingWindowID);
       }  
     }
     public static void ClearBatch3D(){
