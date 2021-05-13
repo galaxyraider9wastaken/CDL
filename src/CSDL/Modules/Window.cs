@@ -6,14 +6,21 @@ namespace CSDL.Graphics{
     private int Height;
     private int X;
     private int Y;
-    private int UpdateState;
     private int Color;
-    public Window(int width, int height, int x, int y, Color color){
+    private string Title;
+    public Window(int width, int height, int x, int y, Color color, string title){
       Width = width;
       Height = height;
       X = x;
       Y = y;
       Color = color;
+      Title = title;
+    }
+    public void UpdateWindow(){
+      
+    }
+    public void DrawWindow(){
+      
     }
   }
 }
