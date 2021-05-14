@@ -1,5 +1,5 @@
-#ifndef VECTOR2_H
-#define VECTOR2_H
+#ifndef VECTOR_H
+#define VECTOR_H
 
 #include "Vector2.h"
 #include "Vector3.h"
