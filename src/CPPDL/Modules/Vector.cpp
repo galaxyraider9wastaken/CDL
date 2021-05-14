@@ -85,11 +85,21 @@ Vector4 Vector:: DivideVec4(Vector4 V1, Vector4 V2){
   VA.W = V1.W / V2.W;
   return VA; 
 }
-Vector2 Vector:: NormalizeVec2(Vector4 V1, Vector4 V2){
-  Vector2 VA = Vector2(0, 0, 0, 0);
-  VA.X = V1.X / V2.X;
-  VA.Y = V1.Y / V2.Y;
-  VA.Z = V1.Z / V2.Z;
-  VA.W = V1.W / V2.W;
+Vector2 Vector:: NormalizeVec2(Vector2 V1, Vector2 V2){
+  Vector2 VA = Vector2(0, 0);
+  float distance = Sqrt(V1.X * V2.X + V1.Y * V2.Y);
+  VA = Vector2(V1.X/distance, V1.Y/distance);
+  return VA; 
+}
+Vector3 Vector:: NormalizeVec3(Vector3 V1, Vector3 V2){
+  Vector3 VA = Vector3(0, 0, 0);
+  float distance = Sqrt(V1.X * V2.X + V1.Y * V2.Y + V1.Z * V2.Z);
+  VA = Vector2(V1.X/distance, V1.Y/distance, V1.Z/distance);
+  return VA;
+}
+Vector4 Vector:: NormalizeVec4(Vector4 V1, Vector4 V2){
+  Vector4 VA = Vector4(0, 0, 0, 0);
+  float distance = Sqrt(V1.X * V2.X + V1.Y * V2.Y + V1.Z * V2.Z + V1.W * V2.W);
+  VA = Vector4(V1.X/distance, V1.Y/distance, V1.Z/distance, V1.W/distance);
   return VA; 
 }
