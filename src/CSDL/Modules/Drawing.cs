@@ -2,10 +2,10 @@ using System;
 
 namespace CSDL.Graphics{
   public class DrawBatch : Globals{
-    public static void Draw2D(Vector2 Position, Vector2 Size, Vector2 Rotation, Texture2D, int RFilter){
+    public static void Draw2D(Vector2 Position, Vector2 Size, Vector2 Rotation, Texture2D Texture, int RFilter){
       using (StreamWriter writer = new StreamWriter(DrawingBatchDataPath + "Sprite2D.txt", true))  
       {  
-        writer.WriteLine(Position.X+","+Position.Y+","+Size.X+","+Size.Y+","+Rotation.X+","+Rotation.Y+","+Texture2D.Path+","+RFilter+","+DrawingWindowID);
+        writer.WriteLine(Position.X+","+Position.Y+","+Size.X+","+Size.Y+","+Rotation.X+","+Rotation.Y+","+Texture.Path+","+RFilter+","+DrawingWindowID);
       }  
     }
     public static void ClearBatch2D(){
