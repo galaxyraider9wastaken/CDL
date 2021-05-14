@@ -11,10 +11,10 @@ namespace CSDL.Graphics{
     public static void ClearBatch2D(){
       System.IO.File.WriteAllText(DrawingBatchDataPath + "Sprite2D.txt",string.Empty);
     }
-    public static void Draw3D(Vector3 Position, Vector3 Size, Vector3 Rotation, Texture3D){
+    public static void Draw3D(Vector3 Position, Vector3 Size, Vector3 Rotation, Texture3D Texture){
       using (StreamWriter writer = new StreamWriter(DrawingBatchDataPath + "Sprite3D.txt", true))  
       {  
-        writer.WriteLine(Position.X+","+Position.Y+","+Position.Z+","+Size.X+","+Size.Y+","+Size.Z+","+Rotation.X+","+Rotation.Y+","+Rotation.Z+","+Texture3D.Path+","+DrawingWindowID);
+        writer.WriteLine(Position.X+","+Position.Y+","+Position.Z+","+Size.X+","+Size.Y+","+Size.Z+","+Rotation.X+","+Rotation.Y+","+Rotation.Z+","+Texture.Path+","+DrawingWindowID);
       }  
     }
     public static void ClearBatch3D(){
