@@ -1,4 +1,5 @@
 using System;
+using CSDL.LinearAlgebra;
 
 namespace CSDL.Graphics{
   public class Color{
