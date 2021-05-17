@@ -7,6 +7,7 @@ namespace CSDL.Graphics{
     private int Color;
     private string Title;
     private bool FullScreen;
+    public int DWD_ID;
     public Window(int width, int height, Color color, string title, bool fullScreen){
       Width = width;
       Height = height;
