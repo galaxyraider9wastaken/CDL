@@ -14,9 +14,10 @@ namespace CSDL.Graphics{
       Color = color;
       Title = title;
       FullScreen = fullScreen;
+      WindowNum+=1;
       using (StreamWriter writer = new StreamWriter(DrawingBatchDataPath + "Window.txt", true))  
       {  
-        writer.WriteLine(Width+","+Height+","+X+","+Y+","+Color.RGBA.X+","+Color.RGBA.Y+","+Color.RGBA.Z+","+Color.RGBA.W+","+Title+","+FullScreen+","+DrawingWindowID+";");
+        writer.WriteLine(Width+","+Height+","+X+","+Y+","+Color.RGBA.X+","+Color.RGBA.Y+","+Color.RGBA.Z+","+Color.RGBA.W+","+Title+","+FullScreen+","+DrawingWindowID+","+DWD_ID";");
       }  
     }
   }
