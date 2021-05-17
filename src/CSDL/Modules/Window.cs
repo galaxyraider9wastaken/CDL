@@ -4,20 +4,18 @@ namespace CSDL.Graphics{
   public class Window : Globals{
     private int Width;
     private int Height;
-    private int X;
-    private int Y;
     private int Color;
     private string Title;
-    public Window(int width, int height, int x, int y, Color color, string title){
+    private bool FullScreen;
+    public Window(int width, int height, Color color, string title, bool fullScreen){
       Width = width;
       Height = height;
-      X = x;
-      Y = y;
       Color = color;
       Title = title;
+      FullScreen = fullScreen;
       using (StreamWriter writer = new StreamWriter(DrawingBatchDataPath + "Window.txt", true))  
       {  
-        writer.WriteLine(Width+","+Height+","+X+","+Y+","+Color.RGBA.X+","+Color.RGBA.Y+","+Color.RGBA.Z+","+Color.RGBA.W+","+Title+","+DrawingWindowID+";");
+        writer.WriteLine(Width+","+Height+","+X+","+Y+","+Color.RGBA.X+","+Color.RGBA.Y+","+Color.RGBA.Z+","+Color.RGBA.W+","+Title+","+FullScreen+","+DrawingWindowID+";");
       }  
     }
   }
