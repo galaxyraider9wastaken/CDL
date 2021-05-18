@@ -5,10 +5,14 @@ namespace CSDL.Graphics{
     public int Width;
     public int Height;
     public string Path;
+    public int Filter;
     public Texture2D(int width, int height, string path){
       Width = width;
       Height = height;
       Path = path;
+    }
+    public TextureSetFilte(int filter){
+      Filter = filter;
     }
   }
 }
