@@ -5,7 +5,7 @@ namespace CSDL.Graphics{
     public static void Draw2D(Window window, Vector2 Position, Vector2 Size, Vector2 Rotation, Texture2D Texture, int RFilter){
       using (StreamWriter writer = new StreamWriter(DrawingBatchDataPath + "Sprite2D.txt", true))  
       {  
-        writer.WriteLine(Position.X+","+Position.Y+","+Size.X+","+Size.Y+","+Rotation.X+","+Rotation.Y+","+Texture.Path+","+RFilter+","+DrawingWindowID+","+window.DWD_ID";");
+        writer.WriteLine(Position.X+","+Position.Y+","+Size.X+","+Size.Y+","+Rotation.X+","+Rotation.Y+","+Texture.Path+","+Texture.Filter+","+RFilter+","+DrawingWindowID+","+window.DWD_ID";");
       }  
     }
     public static void ClearBatch2D(){
