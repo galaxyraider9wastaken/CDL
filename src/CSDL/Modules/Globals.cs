@@ -3,5 +3,8 @@ namespace CSDL{
       public static string DrawingBatchDataPath;
       public static int DrawingWindowID = 101;
       public static int WindowNum;
+      public static string VertexShaderPath;
+      public static string FragmentShaderPath;
+      public static string ShaderDataPath;
   }
 }
