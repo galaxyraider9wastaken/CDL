@@ -7,10 +7,10 @@ namespace CDL.Graphics{
     public Uniform(){
       
     }
-    public void CreateUniform(int DataType, string DataFilePath){
+    public void CreateUniform(string DataFilePath){
       using (StreamWriter writer = new StreamWriter(Path, true))
       {  
-        writer.WriteLine(Name+","+Shader.ShaderPath+","+Shader.ShaderType+","+DataFilePath+","DataType+";");
+        writer.WriteLine(Name+","+Shader.ShaderPath+","+Shader.ShaderType+","+DataFilePath";");
       }  
     }
     public void GetLocation(Shader shader, string name){
