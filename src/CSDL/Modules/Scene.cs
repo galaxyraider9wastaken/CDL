@@ -5,6 +5,8 @@ namespace CSDL.Graphics{
     public Shader VertexShader;
     public Shader FragmentShader;
     public Window[] Windows;
+    public Window CurrentWindow;
+    public Camera CurrentCamera;
     public Scene2D(Shader vertexShader, Shader fragmentShader, Window[] windows){
       VertexShader = vertexShader;
       FragmentShader = fragmentShader;
