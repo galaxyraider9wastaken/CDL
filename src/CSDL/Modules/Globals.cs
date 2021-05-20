@@ -6,5 +6,6 @@ namespace CSDL{
       public static string VertexShaderPath;
       public static string FragmentShaderPath;
       public static string ShaderDataPath;
+      public static string ScenePath;
   }
 }
