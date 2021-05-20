@@ -7,5 +7,6 @@ namespace CSDL{
       public static string FragmentShaderPath;
       public static string ShaderDataPath;
       public static string ScenePath;
+      public static Vector3 Gravity;
   }
 }
